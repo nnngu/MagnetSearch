@@ -12,8 +12,8 @@ $(function () {
             // 去"磁力吧"收集磁力链接
             $("#result").attr('src', "https://www.ciliba.org/s/"+ keyword +".html");
         }
-        if (site == "cililiana") {
-            // 去"cililiana"收集磁力链接
+        if (site == "cililian") {
+            // 去"cililian"收集磁力链接
             $("#result").attr('src', "http://cililianc.com/list/"+ keyword +"/1.html");
         }
         if (site == "屌丝搜") {
