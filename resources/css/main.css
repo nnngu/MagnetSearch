@@ -1,0 +1,12 @@
+.btn {
+    padding-right: 1px;
+}
+
+#result {
+    width: 100%;
+    height: 80%;
+}
+
+.navbar-collapse {
+    display: none;
+}

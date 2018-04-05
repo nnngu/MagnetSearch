@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>种子搜索神器 </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/Ladda/1.0.6/ladda.min.css" rel="stylesheet">
+    <link href="resources/css/base.css" rel="stylesheet">
+    <link href="resources/css/main.css" rel="stylesheet">
+    <link href="resources/css/search_result.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/button.min.js"></script>
+    <!--<script src="resources/js/search_result.js"></script>-->
+    <script src="resources/js/main.js"></script>
+</head>
+<body>
+
+<div>
+    <div class="" style="min-height: 87%">
+        <div class="">
+            <!--选项-->
+            <div class="" id="" data-toggle="">
+                <label class="btn"> <!--active-->
+                    <input class="site_input" type="radio" name="site" autocomplete="off" value="种子搜" id="btn1">种子搜
+                </label>
+
+                <label class="btn">
+                    <input class="site_input" type="radio" name="site" autocomplete="off"
+                           value="磁力吧" id="btn2">磁力吧
+                </label>
+
+                <label class="btn">
+                    <input class="site_input" type="radio" name="site" autocomplete="off"
+                           value="cililiana" id="btn3">cililiana
+                </label>
+
+                <label class="btn">
+                    <input class="site_input" type="radio" name="site" autocomplete="off"
+                           value="屌丝搜" id="btn4">屌丝搜
+                </label>
+            </div>
+
+            <!--文本输入框和搜索按钮-->
+            <div class="form-group">
+                <div class="col-xs-9" style="padding: 0px">
+                    <input class="form-control" placeholder="" id="keyword" name="keyword"
+                           value="">
+                </div>
+                <div class="col-xs-3" style="padding-right: 0px;">
+                    <input class="btn btn-primary btn-block" type="" value="搜索"
+                           id="btn_search">
+                </div>
+            </div>
+
+        </div>
+
+        <iframe id="result" class="" src=""></iframe>
+
+        <!--<div class="container-margin-bottom">-->
+            <!--<div class="text-center" style="font-size: 22px" id="div_loading" hidden>-->
+                <!--加载中...-->
+            <!--</div>-->
+            <!--<table class="table table-bordered table-hover table-condensed" id="table_content">-->
+                <!--<tr id="tr_placeholder">-->
+                <!--</tr>-->
+
+            <!--</table>-->
+
+            <!--<div hidden id="div_btn_request_page">-->
+                <!--<button class="ladda-button btn-block" data-style="expand-left" data-size="s"-->
+                        <!--id="btn_request_page" data-color="blue">点击加载更多-->
+                <!--</button>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    </div>
+    <div id="footer">
+        <div id="footer-content">
+            <a href="https://github.com/nnngu/MagnetSearch" target="_blank">Github源码</a> |
+            <a href="https://github.com/nnngu/MagnetSearch/issues" target="_blank">问题反馈</a>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<script src="https://cdn.bootcss.com/Ladda/1.0.6/ladda.jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/Ladda/1.0.6/spin.min.js"></script>
+<script src="https://cdn.bootcss.com/Ladda/1.0.6/ladda.min.js"></script>
+<script>
+    Ladda.bind('#btn_request_page', {
+        callback: function (instance) {
+            requestSearch(function () {
+                instance.stop()
+            })
+        }
+    });
+</script>
+</body>
+</html>
